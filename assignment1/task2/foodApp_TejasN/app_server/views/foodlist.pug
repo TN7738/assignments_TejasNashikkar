@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  p.tl Here is a list of my favourite foods
+  .container.pt-4
+    .row 
+      .col-12.col-md-8.ml-auto.mr-auto
+          .card 
+            .card-block.d-flex.justify-content-between.align-items-center
+              .w-50.pr-5.d-flex.flex-column.justify-content-center.align-items-center.h-100.txt-blck
+                p.h3 Tofu Salad
+                p.h6.pt-3.text-center It’s a crispy, crunchy, and colourful mix of appealing foods – and exceptionally healthy to boot!
+              img(src="/images/tofu-salad.jpg", alt="Tofu-salad").w-50
+          .card.mt-2.mb-2
+            .card-block.d-flex.justify-content-between.align-items-center
+              .w-50.pr-5.d-flex.flex-column.justify-content-center.align-items-center.h-100.txt-blck
+                p.h3 Lasagna
+                p.h6.pt-3.text-center This classic lasagna is made with an easy meat sauce as the base. This is great for feeding a big family.
+              img(src="/images/lasagna.jpg", alt="Lasagna").w-50
+          .card 
+            .card-block.d-flex.justify-content-between.align-items-center
+              .w-50.pr-5.d-flex.flex-column.justify-content-center.align-items-center.h-100.txt-blck
+                p.h3 Burger
+                p.h6.pt-3.text-center This is the ultimate burger that holds together well, and is incredibly delicious with bursting flavours of spices.
+              img(src="/images/burger.jpg", alt="Burger").w-50
