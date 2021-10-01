@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(name='viewport',content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse.bg-success
+        .container 
+          a.navbar-brand(href='/ ')
+            img(src="/images/logo.png", alt="Logo").logo-img
+          #navbarMain.navbar-collapse.collapse
+            ul.navbar-nav.mr-auto
+              li.nav-item
+                a.nav-link(href='/foodlist/') Food List
+              li.nav-item
+                a.nav-link(href='/favourite-food/') Favourite Food
+    .atf-wrap
+      .container.d-flex.flex-column.justify-content-center.align-items-center.h-100.text-white.wrapper      
+        block content
+    footer.pt-4.pb-4.bg-white.text-center
+      .container
+        .row 
+          .col-12 
+            small &copy; Tejas - 9987769669
+    script(src="/javascripts/jquery-3.6.0.min.js")
+    script(src="/javascripts/fontawesome.min.js")
+    script(src="/javascripts/bootstrap.min.js")
