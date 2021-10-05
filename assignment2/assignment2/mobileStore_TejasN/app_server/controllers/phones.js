@@ -18,14 +18,14 @@ const mobilesArray = [
         name: 'iPhone 13 Pro',
         storage_options: [128, 256, 512, 1],
         colors: ['#a7c1d9', '#f1f2ed', '#fae7cf', '#54524f'],
-        price: '$1399'
+        price: '$1249'
     },
     {
         image: 'iphone-13-pro-max.jpg',
         name: 'iPhone 13 Pro Max',
         storage_options: [128, 256, 512, 1],
         colors: ['#a7c1d9', '#f1f2ed', '#fae7cf', '#54524f'],
-        price: '$1249'
+        price: '$1399'
     }
 ];
 
