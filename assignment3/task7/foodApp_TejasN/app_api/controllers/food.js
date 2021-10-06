@@ -67,7 +67,6 @@ const foodListUpdateOne = (req, res) => {
     }
     food
         .findById(req.params.foodid)
-        .select('-reviews -rating')
         .exec((err, fooddata) => {
             if(!fooddata){
                 sendJSONResponse(res, 404, {'message': 'no fooddata found'});
@@ -77,8 +76,8 @@ const foodListUpdateOne = (req, res) => {
                 sendJSONResponse(res, 400, err);
                 return
             }
-            fooddata.name = req.body.name;
-            fooddata.desc = req.body.desc;
+            fooddata.foodItem = req.body.name;
+            fooddata.description = req.body.desc;
             fooddata.img = req.body.img;
             fooddata.save((err, fooddata) => {
                 if(err){
