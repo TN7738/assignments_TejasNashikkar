@@ -36,7 +36,18 @@ a {
 .foodlist li:nth-child(2){
   margin: 2rem 0;
 }
-
 nav a .logo-img{
   width: 40px;
+}
+.shdw{
+  transition: all 450ms;
+}
+.shdw:hover{
+  box-shadow: 0px 0px 24px 4px rgba(0,0,0,0.64) inset;
+  -webkit-box-shadow: 0px 0px 24px 4px rgba(0,0,0,0.64) inset;
+  -moz-box-shadow: 0px 0px 24px 4px rgba(0,0,0,0.64) inset;
+  text-decoration: none;
+}
+.bold{
+  font-weight: 700;
 }
