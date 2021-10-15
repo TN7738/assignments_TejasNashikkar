@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  p.tl Here is a list of my favourite foods
+  .container.pt-4
+    .row 
+      .col-12.col-md-8.ml-auto.mr-auto
+        ul.pl-0.foodlist.h-100
+          each food in foods
+            li.list-unstyled
+              .card
+                a(href=`/food-info/${food._id}`).card-block.d-flex.justify-content-between.align-items-center.shdw
+                  .w-50.pr-5.d-flex.flex-column.justify-content-center.align-items-center.h-100.txt-blck
+                    p.h3= food.foodItem
+                    p.h6.pt-3.text-center= food.description
+                  img(src=`/images/${food.img}`, alt=`${food.img}`).w-50
+        p 
+          a(href='/new').d-flex.justify-content-center.align-items-center Add New Food Item
