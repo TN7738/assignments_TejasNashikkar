@@ -7,19 +7,17 @@ html
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse.bg-success
+    nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
         .container 
           a.navbar-brand(href='/ ')
-            img(src="/images/logo.png", alt="Logo").logo-img
+            img(src="/images/home.png", alt="Home").logo-img
           #navbarMain.navbar-collapse.collapse
             ul.navbar-nav.mr-auto
               li.nav-item
-                a.nav-link(href='/foodlist/') Food List
+                a.nav-link.h6(href='/list-display/') Latest Phones
               li.nav-item
-                a.nav-link(href='/favourite-food/') Favourite Food
-    .atf-wrap
-      .container.d-flex.flex-column.justify-content-center.align-items-center.h-100.text-white.wrapper      
-        block content
+                a.nav-link.h6(href='/about/') About Us
+    block content     
     footer.pt-4.pb-4.bg-white.text-center
       .container
         .row 

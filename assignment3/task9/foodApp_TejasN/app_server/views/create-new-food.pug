@@ -2,7 +2,7 @@ extends layout
 
 block content
     h1= title
-    .container.pt-4
+    .container.pt-4.new-food-wrap
         .row 
             .col-12.col-md-8.ml-auto.mr-auto
                 - let foodName = "";
@@ -22,22 +22,33 @@ block content
                 form(method="post", role="form" action= "")
                     .form-group.row 
                         label.col-10.col-sm-2.col-form-label(for="foodItem") Name 
-                        .col-12.col-sm-10 
-                            input#foodItem.form-control(name="foodItem", value= foodName)
+                        .col-12.col-sm-10
+                            input#foodItem.form-control.vld(name="foodItem", value= foodName)
+                            span.err-sp.err-name
                     .form-group.row 
                         label.col-10.col-sm-2.col-form-label(for="description") Description 
                         .col-12.col-sm-10 
-                            input#description.form-control(name="description", value= foodDesc)
+                            input#description.form-control.vld(name="description", value= foodDesc)
+                            span.err-sp.err-desc
                     .form-group.row 
                         label.col-10.col-sm-2.col-form-label(for="img") Image 
                         .col-12.col-sm-10 
-                            input#img.form-control(name="img", value= foodImg)
+                            .img-upload-wrap 
+                                .button_outer
+                                    .btn_upload
+                                        input#upload_file(type='file' name='')
+                                        span.upld-txt Upload Image
+                                span.error_msg.err-img
+                                #uploaded_view.uploaded_file_view
+                            input#img.form-control.hidden-input(name="img", value= foodImg)
                     .form-group.row 
                         label.col-10.col-sm-2.col-form-label(for="calories") Calories 
                         .col-12.col-sm-10 
-                            input#calories.form-control(name="calories", value= foodCals)
+                            input#calories.form-control.vld(name="calories", value= foodCals)
+                            span.err-sp.err-cals
                     .form-group.row 
                         label.col-10.col-sm-2.col-form-label(for="price") Price 
                         .col-12.col-sm-10 
-                            input#price.form-control(name="price", value= foodPrice)
-                    button.btn.btn-primary.add-food-btn.d-flex.justify-content-center.align-items-center= btnTxt
+                            input#price.form-control.vld(name="price", value= foodPrice)
+                            span.err-sp.err-prc
+                    a.submt-new-fd.add-food-btn.d-flex.justify-content-center.align-items-center= btnTxt
