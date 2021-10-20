@@ -1,0 +1,77 @@
+extends layout
+
+block content
+    .atf-wrap
+        .container.d-flex.flex-column.justify-content-center.align-items-center.h-100.text-white.wrapper 
+            .container.pt-4
+                .row
+                    .container.pt-4
+                        .row
+                            .col-12.col-md-6.ml-auto.mr-auto.new-phone-wrap
+                                h1.text-center= title
+                                .card
+                                    .card-block
+                                        form(method="post", role="form" action= "")
+                                            .form-group.row.pt-3
+                                                .d-flex.align-items-center
+                                                    label.col-10.col-sm-2.col-form-label.ttl(for="image") Image 
+                                                    .col-12.col-sm-10 
+                                                        .img-upload-wrap 
+                                                            .button_outer
+                                                                .btn_upload
+                                                                    input#upload_file(type='file' name='')
+                                                                    span.upld-txt Upload Image
+                                                            span.error_msg
+                                                            #uploaded_view.uploaded_file_view
+                                                    input#image.form-control.hidden-input(name="image")
+                                            .form-group.row.pt-3
+                                                label.col-10.col-sm-2.col-form-label.ttl(for="name") Phone name 
+                                                .col-12.col-sm-10 
+                                                    input#name.form-control.vld(name="name")
+                                                    span.err-sp.err-name
+                                            .form-group.row.pt-3 
+                                                label.col-10.col-sm-2.col-form-label.ttl(for="storage_options") Storage options 
+                                                .col-12.col-sm-10 
+                                                    .check-wrap.for-storage_options
+                                                        input(type="checkbox" name="64" value="64")#64.chkbx
+                                                        label(for="64") 64GB
+                                                        input(type="checkbox" name="128" value="128")#128.chkbx
+                                                        label(for="128") 128GB
+                                                        input(type="checkbox" name="256" value="256")#256.chkbx
+                                                        label(for="256") 256GB
+                                                        input(type="checkbox" name="512" value="512")#512.chkbx
+                                                        label(for="512") 512GB
+                                                        input(type="checkbox" name="1" value="1")#1.chkbx
+                                                        label(for="1") 1TB
+                                                    input#storage_options.form-control.hidden-input(name="storage_options")
+                                                    span.err-sp.err-strg
+                                            .form-group.row.pt-3 
+                                                label.col-10.col-sm-2.col-form-label.ttl(for="colors") Colors 
+                                                .col-12.col-sm-10 
+                                                    .check-wrap.for-colors
+                                                        input(type="checkbox" name="#faddd7" value="#faddd7")#faddd7.chkbx
+                                                        label(for="#faddd7") 
+                                                            span(style="background-color: #faddd7")
+                                                        input(type="checkbox" name="#276787" value="#276787")#276787.chkbx
+                                                        label(for="#276787") 
+                                                            span(style="background-color: #276787")
+                                                        input(type="checkbox" name="#232a31" value="#232a31")#232a31.chkbx
+                                                        label(for="#232a31") 
+                                                            span(style="background-color: #232a31")
+                                                        input(type="checkbox" name="#faf6f2" value="#faf6f2")#faf6f2.chkbx
+                                                        label(for="#faf6f2") 
+                                                            span(style="background-color: #faf6f2")
+                                                        input(type="checkbox" name="#bf0013" value="#bf0013")#bf0013.chkbx
+                                                        label(for="#bf0013") 
+                                                            span(style="background-color: #bf0013")
+                                                        input(type="checkbox" name="#a7c1d9" value="#a7c1d9")#a7c1d9.chkbx
+                                                        label(for="#a7c1d9") 
+                                                            span(style="background-color: #a7c1d9")
+                                                    input#colors.form-control.hidden-input(name="colors")
+                                                    span.err-sp.err-clrs
+                                            .form-group.row.pt-3.pb-3
+                                                label.col-10.col-sm-2.col-form-label.ttl(for="price") Price 
+                                                .col-12.col-sm-10 
+                                                    input#price.form-control.vld(name="price")
+                                                    span.err-sp.err-prc
+                                            a.submt-new-ph.d-flex.justify-content-center.align-items-center Submit
