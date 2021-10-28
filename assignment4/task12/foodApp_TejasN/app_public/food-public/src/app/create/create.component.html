@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="atf-wrap">
+	<div class="container d-flex flex-column justify-content-center align-items-center h-100 text-white wrapper">
+		<h1>Create New Food</h1>
+		<div class="container pt-4 new-food-wrap">
+			<div class="row">
+				<div class="col-12 col-md-8 ml-auto mr-auto">
+					<form #signupForm="ngForm" (ngSubmit) = "createNewFood(newFood)">
+						<div class="form-group row">
+							<label class="col-10 col-sm-2 col-form-label" for="foodItem">Name </label>
+							<div class="col-12 col-sm-10">
+								<input class="form-control vld" [(ngModel)]="newFood.foodItem" id="foodItem" name="foodItem" value="" required="required">
+								<!-- <span class="err-sp err-name"></span> -->
+                            </div>
+						</div>
+						<div class="form-group row">
+							<label class="col-10 col-sm-2 col-form-label" for="description">Description </label>
+							<div class="col-12 col-sm-10">
+								<input class="form-control vld" [(ngModel)]="newFood.description" id="description" name="description" value="" required="required">
+								<!-- <span class="err-sp err-desc"></span> -->
+                            </div>
+						</div>
+						<div class="form-group row">
+							<label class="col-10 col-sm-2 col-form-label" for="img">Image </label>
+							<div class="col-12 col-sm-10">
+								<!-- <div class="img-upload-wrap">
+									<div class="button_outer">
+										<div class="btn_upload">
+											<input id="upload_file" type="file" name=""><span class="upld-txt">Upload Image</span>
+                                        </div>
+									</div><span class="error_msg err-img"></span>
+									<div class="uploaded_file_view" id="uploaded_view"></div>
+								</div> -->
+								<input class="form-control" [(ngModel)]="newFood.img" id="img" name="img" value="" required="required">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-10 col-sm-2 col-form-label" for="calories">Calories </label>
+							<div class="col-12 col-sm-10">
+								<input class="form-control vld" [(ngModel)]="newFood.calories" id="calories" name="calories" value="" required="required">
+								<!-- <span class="err-sp err-cals"></span> -->
+                            </div>
+						</div>
+						<div class="form-group row">
+							<label class="col-10 col-sm-2 col-form-label" for="price">Price </label>
+							<div class="col-12 col-sm-10">
+								<input class="form-control vld" [(ngModel)]="newFood.price" id="price" name="price" value="" required="required">
+								<!-- <span class="err-sp err-prc"></span> -->
+                            </div>
+						</div>
+                        <button type="submit" class="submt-new-fd add-food-btn d-flex justify-content-center align-items-center">Add Food Item</button>
+                    </form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

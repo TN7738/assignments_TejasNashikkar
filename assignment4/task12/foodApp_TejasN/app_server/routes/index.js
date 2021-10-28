@@ -16,6 +16,6 @@ router.get('/new', ctrlFood.addNewFood);
 router.post('/new', ctrlFood.doAddNewFood);
 
 router.get('/edit/:foodid', ctrlFood.editFoodItem);
-router.post('/edit/:foodid', ctrlFood.doEditFoodItem);
+router.put('/edit/:foodid', ctrlFood.doEditFoodItem);
 
 module.exports = router;
