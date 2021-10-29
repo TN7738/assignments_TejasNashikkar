@@ -64,6 +64,7 @@ const phoneListReadOne = (req, res) => {
 };
 const phoneListUpdateOne = (req, res) => {
     if(!req.params.phoneid){
+        console.log("phoneid");
         sendJSONResponse(res, 404, {'message': 'phoneid is required'});
         return;
     }
@@ -71,6 +72,7 @@ const phoneListUpdateOne = (req, res) => {
         .findById(req.params.phoneid)
         .exec((err, mobiledata) => {
             if(!mobiledata){
+                console.log("mobile data");
                 sendJSONResponse(res, 404, {'message': 'no mobiledata found'});
                 return;
             }
@@ -80,11 +82,12 @@ const phoneListUpdateOne = (req, res) => {
             }
             mobiledata.image = req.body.image,
             mobiledata.name = req.body.name,
-            mobiledata.storage_options = Number(req.body.storage_options.split(",")),
-            mobiledata.colors = req.body.colors.split(","),
+            mobiledata.storage_options = req.body.storage_options,
+            mobiledata.colors = req.body.colors,
             mobiledata.price = req.body.price
             mobiledata.save((err, mobiledata) => {
                 if(err){
+                    console.log("hit");
                     sendJSONResponse(res, 400, err);
                 }
                 else{
