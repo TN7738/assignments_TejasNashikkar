@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Phone Zone</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/stylesheets/style.css">
+</head>
+<body>
+  <app-framework></app-framework>
+  <script src="assets/javascripts/jquery-3.6.0.min.js"></script>
+  <script src="assets/javascripts/bootstrap.min.js"></script>
+  <script src="assets/javascripts/fontawesome.min.js"></script>
+  <script>
+    const appendScript = (url) => {
+      let s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = url;
+      let x = document.getElementsByTagName('head')[0];
+      x.appendChild(s);
+    }
+    setTimeout(() => {
+      appendScript("assets/javascripts/script.js");
+    }, 200);
+  </script>
+</body>
+</html>

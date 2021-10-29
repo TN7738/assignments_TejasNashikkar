@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="atf-wrap">
+	<div class="container d-flex flex-column justify-content-center align-items-center h-100 text-white wrapper">
+		<h1>The Phone Zone</h1>
+		<p class="tl">Here is a list of latest phones</p>
+		<div class="arrow"></div>
+	</div>
+</div>
+<div class="container pt-4 mb-5">
+	<div class="row"> </div>
+	<div class="col-12 col-md-8 ml-auto mr-auto">
+		<ul class="pl-0 phonelist"></ul>
+		<li class="list-unstyled mt-5" *ngFor="let phone of phones">
+			<div class="card">
+				<div class="card-block d-flex justify-content-between align-items-center">
+					<div class="img-wrapper d-flex justify-content-center align-items-center"><img class="w-100" src="assets/images/{{phone.image}}" alt="{{phone.image}}"></div>
+					<div class="w-50 pr-5 d-flex flex-column justify-content-center align-items-center h-100 txt-blck">
+						<p class="h2">{{phone.name}}</p>
+						<p class="h6 pt-3 text-center storages"><span class="ttl">Storage:</span><span class="storage" *ngFor="let storage of phone.storage_options"><span *ngIf="storage != '1'">{{storage}}GB</span><span *ngIf="storage == '1'">{{storage}}TB</span></span></p>
+						<p class="pt-3 text-center colors d-flex justify-content-between align-items-center"><span class="ttl">Colors:</span><span class="color" *ngFor="let color of phone.colors" [style.background-color]="color"></span></p>
+						<p class="h6 pt-3 text-center"><span class="ttl">Price: </span><span>{{phone.price}}</span></p>
+						<p class="h6 pt-3 text-center"><a routerLink="/phone-info/{{phone._id}}">View Details</a>&nbsp;&nbsp;&nbsp;<a routerLink="/edit/{{phone._id}}">Edit</a>&nbsp;&nbsp;&nbsp;<a (click)="deleteThisPhone(phone._id)" href="/phonelist">Delete</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<p> <a class="d-flex justify-content-center align-items-center add-new-btn" routerLink="/new">Add New Phone</a></p>
+	</div>
+</div>
